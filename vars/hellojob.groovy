@@ -1,3 +1,3 @@
-def call(string name = 'user_input') {
+def call(String name = 'user_input') {
   echo "Hi Welcome Hello World user Input libraries,${name}"
 }
