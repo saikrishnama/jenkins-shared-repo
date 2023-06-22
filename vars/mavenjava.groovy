@@ -9,7 +9,7 @@ def call(String repoUrl) {
         }
             stage ('Maven -version')
             {
-                steos {
+                steps {
                     sh '''
                             mvn -version
                             java -version 
