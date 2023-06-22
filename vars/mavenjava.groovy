@@ -1,17 +1,8 @@
 def call(String repoUrl) {
-    pipeline {
+       pipeline {
         agent any
-        options {
-            buildDiscarder(logRotator(numToKeepStr: '2',daysToKeepStr: '3'
-            ))
-            timeout(time: 1, unit: 'HOURS') 
-        }
-        parameters {
-            string(name:'branch',defaultValue:'main', description:"please enter branch name")
-            string(name:'anotherbarnch',defaultValue:'main', description:"please enter branch name")
-            booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-            choice(name: 'CHOICE', choices: ['main', 'dev', 'poc'], description: 'Pick something')
-        }
+
+   
         stages { 
             stage('checkout') {
                 environment {
@@ -62,11 +53,8 @@ def call(String repoUrl) {
                 }
             }
         }
-        post { 
-            always { 
-                echo 'I will always say Hello again!'
-            }
-        }
+        
     }
-    }
+    
+    
 }
