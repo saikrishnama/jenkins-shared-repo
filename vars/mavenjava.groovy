@@ -18,7 +18,7 @@ def call(String repoUrl) {
                         Branch_Name='main'
                 }
                 steps{  
-                    git branch:'main', url: ${repoUrl}
+                    git branch:'main', url: '${repoUrl}'
             }
             stage('code test') {
                 steps {
