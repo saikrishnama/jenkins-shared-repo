@@ -4,7 +4,7 @@ def call(String repoUrl) {
         stages{
             stage('Checkout'){
                 steps {
-                    git branch:'main',url: ${repoUrl}
+                    git branch:'main',url: "${repoUrl}"
                 }
         }
     }
