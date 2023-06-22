@@ -1,8 +1,5 @@
 def call(String repoUrl) {
     pipeline {
-        tools {
-            maven 'Maven 3.9.2'
-        }
         agent any
         stages{
             stage('Checkout'){
